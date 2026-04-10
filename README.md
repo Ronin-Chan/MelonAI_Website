@@ -1,36 +1,61 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# MelonAI Website
 
-## Getting Started
+This repository contains a frontend landing page for the Melon AI platform. It is built with `Next.js`, styled with `Tailwind CSS`, and uses reusable UI components inspired by the `shadcn/ui` design system.
 
-First, run the development server:
+## Features
+
+- Landing page for an AI agent platform
+- Neutral UI theme with consistent styling
+- Reusable components for buttons, cards, and badges
+- Responsive layout and motion-based animations
+
+## Tech Stack
+
+- `Next.js 16`
+- `React 19`
+- `TypeScript`
+- `Tailwind CSS 4`
+- `framer-motion`
+- `lucide-react`
+
+## Project Structure
+
+- `app/`
+  - `page.tsx` – main page content and layout
+  - `layout.tsx` – root layout and metadata
+  - `globals.css` – global styles and theme variables
+- `components/ui/` – reusable UI components
+  - `button.tsx`
+  - `card.tsx`
+  - `badge.tsx`
+- `lib/utils.ts` – utility helpers
+
+## Local Development
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open `http://localhost:3000` in your browser to view the site.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Build and Deploy
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+npm run build
+npm run start
+```
 
-## Learn More
+## Development Notes
 
-To learn more about Next.js, take a look at the following resources:
+- Primary page editing: `app/page.tsx`
+- Global theme adjustments: `app/globals.css`
+- Shared UI components: `components/ui/*`
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+> The current UI is optimized for a neutral slate theme with medium border radius styling.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Extending the Project
 
-## Deploy on Vercel
+To expand the page content, edit `app/page.tsx` or add additional components under `components/ui/`.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+For additional guidance, refer to the official documentation for `Next.js`, `Tailwind CSS`, and `shadcn/ui`.

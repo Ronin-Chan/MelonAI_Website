@@ -16,6 +16,9 @@ import {
   Wand2,
   Workflow,
 } from "lucide-react";
+import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
+import { Card } from "@/components/ui/card";
 
 const highlights = [
   "Orchestrate specialised agents across product, support, operations, and growth.",
@@ -30,7 +33,7 @@ const agentRoles = [
     tagline: "Drives multi-step work from request to completed outcome.",
     description:
       "Use Watermelon for planning, tool use, task breakdown, and dependable follow-through across internal workflows.",
-    accent: "from-rose-500 via-pink-500 to-red-500",
+    accent: "from-slate-600 via-slate-700 to-slate-900",
     icon: Bot,
   },
   {
@@ -39,7 +42,7 @@ const agentRoles = [
     tagline: "Reviews intent, risk, and failure paths before actions run.",
     description:
       "Use Bittermelon when a workflow needs challenge, validation, approvals, or stronger operational guardrails.",
-    accent: "from-lime-500 via-emerald-500 to-green-600",
+    accent: "from-slate-500 via-slate-600 to-slate-700",
     icon: ShieldCheck,
   },
   {
@@ -48,7 +51,7 @@ const agentRoles = [
     tagline: "Handles customer-facing conversations with a calm product voice.",
     description:
       "Use Honeydew for onboarding, support, account guidance, and conversational experiences that should feel polished and patient.",
-    accent: "from-emerald-300 via-lime-300 to-green-400",
+    accent: "from-slate-400 via-slate-500 to-slate-600",
     icon: MessageSquareText,
   },
   {
@@ -57,7 +60,7 @@ const agentRoles = [
     tagline: "Turns briefs into launch-ready content, campaigns, and assets.",
     description:
       "Use Cantaloupe for messaging, launch materials, landing pages, and the creative systems that support go-to-market execution.",
-    accent: "from-orange-400 via-amber-400 to-yellow-300",
+    accent: "from-slate-500 via-slate-600 to-slate-700",
     icon: Sparkles,
   },
 ];
@@ -109,11 +112,11 @@ function MelonOrb() {
         initial={{ opacity: 0, scale: 0.92 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.8, ease: "easeOut" }}
-        className="relative h-72 w-72 rounded-full border border-white/25 bg-gradient-to-br from-rose-400 via-pink-500 to-red-500 shadow-[0_30px_140px_rgba(244,63,94,0.35)] sm:h-84 sm:w-84"
+        className="relative h-72 w-72 rounded-full border border-white/25 bg-linear-to-br from-slate-700 via-slate-900 to-slate-950 shadow-[0_30px_140px_rgba(15,23,42,0.16)] sm:h-84 sm:w-84"
       >
         <div className="absolute inset-4 rounded-full border border-white/20" />
-        <div className="absolute left-1/2 top-0 h-20 w-20 -translate-x-1/2 -translate-y-8 rounded-full bg-gradient-to-b from-lime-300 to-green-500 blur-[1px]" />
-        <div className="absolute left-1/2 top-1/2 h-[88%] w-[88%] -translate-x-1/2 -translate-y-1/2 rounded-full border-[10px] border-emerald-400/90" />
+        <div className="absolute left-1/2 top-0 h-20 w-20 -translate-x-1/2 -translate-y-8 rounded-full bg-linear-to-b from-slate-300 to-slate-100 blur-[1px]" />
+        <div className="absolute left-1/2 top-1/2 h-[88%] w-[88%] -translate-x-1/2 -translate-y-1/2 rounded-full border-10 border-slate-400/50" />
         <div className="absolute left-1/2 top-1/2 h-[70%] w-[70%] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[radial-gradient(circle_at_30%_30%,rgba(255,255,255,0.35),transparent_28%),radial-gradient(circle_at_center,rgba(255,255,255,0.06),transparent_60%)]" />
 
         {[
@@ -187,10 +190,10 @@ function SectionTitle({
 }) {
   return (
     <div className="mx-auto max-w-3xl text-center">
-      <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-emerald-200 bg-white/80 px-4 py-2 text-sm font-medium text-emerald-700 backdrop-blur">
+      <Badge className="mb-4 bg-slate-100 text-slate-700 border-slate-200">
         <Citrus className="h-4 w-4" />
         {eyebrow}
-      </div>
+      </Badge>
       <h2 className="text-3xl font-semibold tracking-tight text-slate-950 sm:text-4xl">
         {title}
       </h2>
@@ -201,13 +204,13 @@ function SectionTitle({
 
 export default function HomePage() {
   return (
-    <div className="min-h-screen overflow-hidden bg-[#fff8f6] text-slate-900">
-      <div className="absolute inset-x-0 top-0 -z-10 h-[760px] bg-[radial-gradient(circle_at_top_left,rgba(244,63,94,0.2),transparent_28%),radial-gradient(circle_at_top_right,rgba(132,204,22,0.18),transparent_32%),linear-gradient(to_bottom,#fff8f6,rgba(255,248,246,0.94))]" />
+    <div className="min-h-screen overflow-hidden bg-slate-50 text-slate-950">
+      <div className="absolute inset-x-0 top-0 -z-10 h-[760px] bg-[radial-gradient(circle_at_top_left,rgba(148,163,184,0.14),transparent_28%),radial-gradient(circle_at_top_right,rgba(148,163,184,0.12),transparent_28%),linear-gradient(to_bottom,#f8fafc,rgba(248,250,252,0.96))]" />
 
-      <header className="sticky top-0 z-40 border-b border-white/50 bg-[#fff8f6]/80 backdrop-blur-xl">
+      <header className="sticky top-0 z-40 border-b border-slate-200 bg-white/90 backdrop-blur-xl">
         <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 lg:px-8">
           <a href="#" className="flex items-center gap-3">
-            <div className="flex h-11 w-11 items-center justify-center rounded-2xl bg-gradient-to-br from-rose-500 via-pink-500 to-red-500 text-white shadow-lg shadow-rose-500/25">
+            <div className="flex h-11 w-11 items-center justify-center rounded-md bg-slate-950 text-white shadow-lg shadow-slate-300/20">
               <Citrus className="h-5 w-5" />
             </div>
             <div>
@@ -231,19 +234,15 @@ export default function HomePage() {
           </nav>
 
           <div className="flex items-center gap-3">
-            <a
-              href="#agents"
-              className="hidden rounded-full border border-slate-200 bg-white px-5 py-2.5 text-sm font-medium text-slate-700 transition hover:border-slate-300 hover:text-slate-950 sm:inline-flex"
-            >
-              View agent roles
-            </a>
-            <a
-              href="#launch"
-              className="inline-flex items-center gap-2 rounded-full bg-slate-950 px-5 py-2.5 text-sm font-medium text-white transition hover:bg-slate-800"
-            >
-              Build with Melon AI
-              <ArrowRight className="h-4 w-4" />
-            </a>
+            <Button asChild variant="outline" className="hidden sm:inline-flex">
+              <a href="#agents">View agent roles</a>
+            </Button>
+            <Button asChild variant="default" className="inline-flex items-center gap-2">
+              <a href="#launch">
+                Build with Melon AI
+                <ArrowRight className="h-4 w-4" />
+              </a>
+            </Button>
           </div>
         </div>
       </header>
@@ -269,7 +268,7 @@ export default function HomePage() {
                 className="mt-6 max-w-4xl text-5xl font-semibold tracking-tight text-slate-950 sm:text-6xl lg:text-7xl"
               >
                 Build reliable AI teammates with{" "}
-                <span className="bg-gradient-to-r from-rose-500 via-pink-500 to-red-500 bg-clip-text text-transparent">
+                <span className="text-slate-950">
                   Melon AI
                 </span>
                 .
@@ -290,20 +289,18 @@ export default function HomePage() {
                 transition={{ delay: 0.24, duration: 0.65, ease: "easeOut" }}
                 className="mt-8 flex flex-col gap-4 sm:flex-row"
               >
-                <a
-                  href="#launch"
-                  className="inline-flex items-center justify-center gap-2 rounded-full bg-slate-950 px-6 py-3.5 text-sm font-medium text-white transition hover:bg-slate-800"
-                >
-                  See the platform vision
-                  <ArrowRight className="h-4 w-4" />
-                </a>
-                <a
-                  href="#platform"
-                  className="inline-flex items-center justify-center gap-2 rounded-full border border-slate-200 bg-white px-6 py-3.5 text-sm font-medium text-slate-700 transition hover:border-slate-300 hover:text-slate-950"
-                >
-                  Explore capabilities
-                  <ChevronRight className="h-4 w-4" />
-                </a>
+                <Button asChild variant="default" className="inline-flex items-center gap-2">
+                  <a href="#launch">
+                    See the platform vision
+                    <ArrowRight className="h-4 w-4" />
+                  </a>
+                </Button>
+                <Button asChild variant="outline" className="inline-flex items-center gap-2">
+                  <a href="#platform">
+                    Explore capabilities
+                    <ChevronRight className="h-4 w-4" />
+                  </a>
+                </Button>
               </motion.div>
 
               <motion.div
@@ -313,13 +310,10 @@ export default function HomePage() {
                 className="mt-10 grid gap-3"
               >
                 {highlights.map((item) => (
-                  <div
-                    key={item}
-                    className="flex items-start gap-3 rounded-2xl border border-white/70 bg-white/70 px-4 py-4 shadow-sm backdrop-blur"
-                  >
-                    <CheckCircle2 className="mt-0.5 h-5 w-5 text-emerald-500" />
-                    <p className="text-sm leading-6 text-slate-700 sm:text-base">{item}</p>
-                  </div>
+                  <Card key={item} className="flex items-start gap-3 p-4 text-slate-700 shadow-sm">
+                    <CheckCircle2 className="mt-0.5 h-5 w-5 text-slate-600" />
+                    <p className="text-sm leading-6 sm:text-base">{item}</p>
+                  </Card>
                 ))}
               </motion.div>
             </div>
@@ -330,7 +324,7 @@ export default function HomePage() {
 
         <section id="platform" className="mx-auto max-w-7xl px-6 py-20 lg:px-8">
           <div className="grid gap-10 lg:grid-cols-[0.95fr_1.05fr] lg:items-start">
-            <div className="rounded-[36px] border border-slate-200 bg-slate-950 p-8 text-white shadow-[0_20px_80px_rgba(15,23,42,0.2)] sm:p-10">
+            <div className="rounded-md border border-slate-200 bg-slate-950 p-8 text-white shadow-[0_20px_80px_rgba(15,23,42,0.12)] sm:p-10">
               <div className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm text-white/80">
                 <BrainCircuit className="h-4 w-4" />
                 Why Melon AI
@@ -371,7 +365,7 @@ export default function HomePage() {
                     transition={{ delay: index * 0.08, duration: 0.5, ease: "easeOut" }}
                     className="rounded-[30px] border border-slate-200 bg-white p-6 shadow-sm"
                   >
-                    <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-gradient-to-br from-emerald-100 to-rose-100 text-slate-900">
+                    <div className="flex h-12 w-12 items-center justify-center rounded-md bg-slate-100 text-slate-900">
                       <Icon className="h-5 w-5" />
                     </div>
                     <h4 className="mt-5 text-xl font-semibold tracking-tight text-slate-900">
@@ -402,12 +396,12 @@ export default function HomePage() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true, amount: 0.2 }}
                   transition={{ delay: index * 0.08, duration: 0.55, ease: "easeOut" }}
-                  className="group relative overflow-hidden rounded-[32px] border border-slate-200 bg-white p-7 shadow-sm transition hover:-translate-y-1 hover:shadow-xl"
                 >
-                  <div className={`absolute inset-x-0 top-0 h-1.5 bg-gradient-to-r ${agent.accent}`} />
+                  <Card className="group relative overflow-hidden transition hover:-translate-y-1 hover:shadow-xl p-7">
+                  <div className={`absolute inset-x-0 top-0 h-1.5 bg-linear-to-r ${agent.accent}`} />
                   <div className="flex items-start justify-between gap-4">
                     <div
-                      className={`inline-flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-to-br ${agent.accent} text-white shadow-lg`}
+                      className={`inline-flex h-14 w-14 items-center justify-center rounded-md bg-linear-to-br ${agent.accent} text-white shadow-lg`}
                     >
                       <Icon className="h-6 w-6" />
                     </div>
@@ -428,6 +422,7 @@ export default function HomePage() {
                     Designed for platform workflows
                     <ArrowRight className="h-4 w-4 transition group-hover:translate-x-1" />
                   </div>
+                  </Card>
                 </motion.div>
               );
             })}
@@ -462,7 +457,7 @@ export default function HomePage() {
         </section>
 
         <section id="launch" className="mx-auto max-w-7xl px-6 pb-24 pt-8 lg:px-8 lg:pb-28">
-          <div className="relative overflow-hidden rounded-[40px] border border-slate-200 bg-slate-950 px-8 py-12 text-white shadow-[0_20px_100px_rgba(15,23,42,0.28)] sm:px-12 sm:py-14">
+          <div className="relative overflow-hidden rounded-md border border-slate-200 bg-slate-950 px-8 py-12 text-white shadow-[0_20px_100px_rgba(15,23,42,0.18)] sm:px-12 sm:py-14">
             <div className="absolute -right-20 -top-20 h-64 w-64 rounded-full bg-rose-500/20 blur-3xl" />
             <div className="absolute -bottom-20 left-20 h-72 w-72 rounded-full bg-lime-400/10 blur-3xl" />
 
