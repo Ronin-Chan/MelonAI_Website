@@ -50,7 +50,7 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
         className: cn(buttonClassName, (children.props as any).className),
         ref,
         ...props,
-      });
+      } as any);
     }
 
     return (
